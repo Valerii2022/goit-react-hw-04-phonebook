@@ -15,7 +15,6 @@ export const ContactForm = handleAddContacts => {
   };
 
   const addContacts = e => {
-    console.log(handleAddContacts);
     e.preventDefault();
     // handleAddContacts(name, number);
     setName('');
