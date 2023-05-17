@@ -1,18 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { ContactList } from './ContactList';
 import { ContactForm } from './ContactForm';
 import { Filter } from './Filter';
+import { useLocalStorage } from 'hooks/LocaleStorage';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(() => {
-    return JSON.parse(window.localStorage.getItem('contacts')) ?? '';
-  });
+  const [contacts, setContacts] = useLocalStorage('contacts', '');
+  //   const [contacts, setContacts] = useState(() => {
+  //     return JSON.parse(window.localStorage.getItem('contacts')) ?? '';
+  //   });
   const [filter, setFilter] = useState('');
 
-  useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
+  //   useEffect(() => {
+  //     window.localStorage.setItem('contacts', JSON.stringify(contacts));
+  //   }, [contacts]);
 
   const handleFindNameInput = e => {
     setFilter(e.currentTarget.value);
