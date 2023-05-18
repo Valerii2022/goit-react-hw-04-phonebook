@@ -1,4 +1,3 @@
-// import React from 'react';
 import { List, ListItem, Name, DeleteBtn, PhoneNumber } from './styled';
 import PropTypes from 'prop-types';
 
@@ -20,28 +19,6 @@ export const ContactList = ({ contacts, handleContactsDelete }) => {
     </List>
   );
 };
-
-//  export class ContactList extends Component {
-//   render() {
-//     const { contacts, handleContactsDelete } = this.props;
-//     return (
-//       <List>
-//         {contacts.map(({ name, id, number }) => {
-//           return (
-//             <ListItem key={id}>
-//               <Name>
-//                 {name}: <PhoneNumber>{number}</PhoneNumber>
-//               </Name>
-//               <DeleteBtn id={id} onClick={handleContactsDelete}>
-//                 Delete
-//               </DeleteBtn>
-//             </ListItem>
-//           );
-//         })}
-//       </List>
-//     );
-//   }
-// }
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
