@@ -17,7 +17,7 @@ export const Filter = ({ filter, findName }) => {
   );
 };
 
-Filter.protoType = {
+Filter.propType = {
   filter: PropTypes.string.isRequired,
   findName: PropTypes.func.isRequired,
 };
